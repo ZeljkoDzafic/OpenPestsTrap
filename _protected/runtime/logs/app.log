@@ -20169,3 +20169,613 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1437642424.201
     'REQUEST_TIME' => 1437642424
 ]
+2015-07-23 04:35:06 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'openpeststrap.auth_item' doesn't exist' in C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\db\Command.php:825
+Stack trace:
+#0 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\db\Command.php(825): PDOStatement->execute()
+#1 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\db\Command.php(363): yii\db\Command->queryInternal('fetch', NULL)
+#2 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\db\Query.php(243): yii\db\Command->queryOne()
+#3 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\rbac\DbManager.php(223): yii\db\Query->one(Object(yii\db\Connection))
+#4 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\rbac\DbManager.php(184): yii\rbac\DbManager->getItem('member')
+#5 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\rbac\DbManager.php(124): yii\rbac\DbManager->checkAccessRecursive(NULL, 'member', Array, Array)
+#6 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\web\User.php(662): yii\rbac\DbManager->checkAccess(NULL, 'member', Array)
+#7 C:\lamp\www\openpeststrap\_protected\controllers\SiteController.php(89): yii\web\User->can('member')
+#8 [internal function]: app\controllers\SiteController->actionIndex()
+#9 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#10 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#11 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#12 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('', Array)
+#13 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 C:\lamp\www\openpeststrap\index.php(12): yii\base\Application->run()
+#15 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'openpeststrap.auth_item' doesn't exist
+The SQL being executed was: SELECT * FROM `auth_item` WHERE `name`='member'' in C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\db\Schema.php:595
+Stack trace:
+#0 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\db\Command.php(840): yii\db\Schema->convertException(Object(PDOException), 'SELECT * FROM `...')
+#1 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\db\Command.php(363): yii\db\Command->queryInternal('fetch', NULL)
+#2 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\db\Query.php(243): yii\db\Command->queryOne()
+#3 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\rbac\DbManager.php(223): yii\db\Query->one(Object(yii\db\Connection))
+#4 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\rbac\DbManager.php(184): yii\rbac\DbManager->getItem('member')
+#5 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\rbac\DbManager.php(124): yii\rbac\DbManager->checkAccessRecursive(NULL, 'member', Array, Array)
+#6 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\web\User.php(662): yii\rbac\DbManager->checkAccess(NULL, 'member', Array)
+#7 C:\lamp\www\openpeststrap\_protected\controllers\SiteController.php(89): yii\web\User->can('member')
+#8 [internal function]: app\controllers\SiteController->actionIndex()
+#9 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#10 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#11 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#12 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('', Array)
+#13 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 C:\lamp\www\openpeststrap\index.php(12): yii\base\Application->run()
+#15 {main}
+Additional Information:
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'openpeststrap.auth_item' doesn't exist
+)
+
+2015-07-23 04:35:06 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.89 Safari/537.36'
+    'HTTP_HTTPS' => '1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\ManagementStudio\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\wamp\\bin\\php\\php5.5.12;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseGit\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.7'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/lamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/lamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/lamp/www/openpeststrap/index.php'
+    'REMOTE_PORT' => '60020'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/openpeststrap/'
+    'SCRIPT_NAME' => '/openpeststrap/index.php'
+    'PHP_SELF' => '/openpeststrap/index.php'
+    'REQUEST_TIME_FLOAT' => 1437651306.818
+    'REQUEST_TIME' => 1437651306
+]
+2015-07-23 04:51:53 [127.0.0.1][1][b5r0obs2h568kkelbijvqm4dp1][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected 'href' (T_STRING)' in C:\lamp\www\openpeststrap\_protected\views\layouts\content.php:42
+Stack trace:
+#0 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile()
+#1 C:\lamp\www\openpeststrap\_protected\views\layouts\main.php(57): yii\base\View->render()
+#2 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#3 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#4 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->renderFile()
+#5 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\Controller.php(372): yii\base\Controller->renderContent()
+#6 C:\lamp\www\openpeststrap\_protected\controllers\TrapsController.php(58): yii\base\Controller->render()
+#7 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\InlineAction.php(55): app\controllers\TrapsController->actionIndex()
+#8 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\InlineAction.php:55}()
+#9 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams()
+#10 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction()
+#11 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction()
+#12 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#13 C:\lamp\www\openpeststrap\index.php(12): yii\base\Application->run()
+#14 {main}
+2015-07-23 04:51:53 [127.0.0.1][1][b5r0obs2h568kkelbijvqm4dp1][info][application] $_COOKIE = [
+    '_csrf' => 'b7f98d0f17d76930dcab25408f27374d9ecbdbbcd73d43975c0fb6fcec08a4b4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"gZmI6i5XB0Abak1QVujeQe1KPr5bgGk-\";}'
+    'PHPSESSID' => 'b5r0obs2h568kkelbijvqm4dp1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.89 Safari/537.36'
+    'HTTP_HTTPS' => '1'
+    'HTTP_REFERER' => 'http://localhost/openpeststrap/images'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=b7f98d0f17d76930dcab25408f27374d9ecbdbbcd73d43975c0fb6fcec08a4b4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22gZmI6i5XB0Abak1QVujeQe1KPr5bgGk-%22%3B%7D; PHPSESSID=b5r0obs2h568kkelbijvqm4dp1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\ManagementStudio\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\wamp\\bin\\php\\php5.5.12;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseGit\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.7'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/lamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/lamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/lamp/www/openpeststrap/index.php'
+    'REMOTE_PORT' => '60250'
+    'REDIRECT_URL' => '/openpeststrap/traps'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/openpeststrap/traps'
+    'SCRIPT_NAME' => '/openpeststrap/index.php'
+    'PHP_SELF' => '/openpeststrap/index.php'
+    'REQUEST_TIME_FLOAT' => 1437652313.723
+    'REQUEST_TIME' => 1437652313
+]
+2015-07-23 05:01:47 [127.0.0.1][-][-][error][ReflectionException] exception 'ReflectionException' with message 'Class form-control does not exist' in C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\di\Container.php:415
+Stack trace:
+#0 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\di\Container.php(415): ReflectionClass->__construct('form-control')
+#1 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\di\Container.php(358): yii\di\Container->getDependencies('form-control')
+#2 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\di\Container.php(151): yii\di\Container->build('form-control', Array, Array)
+#3 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('form-control', Array, Array)
+#4 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\widgets\ActiveForm.php(281): yii\BaseYii::createObject(Array)
+#5 C:\lamp\www\openpeststrap\_protected\views\site\login.php(30): yii\widgets\ActiveForm->field(Object(app\models\LoginForm), 'username', Array)
+#6 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\View.php(325): require('C:\\lamp\\www\\ope...')
+#7 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\lamp\\www\\ope...', Array)
+#8 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\lamp\\www\\ope...', Array, Object(app\controllers\SiteController))
+#9 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('login', Array, Object(app\controllers\SiteController))
+#10 C:\lamp\www\openpeststrap\_protected\controllers\SiteController.php(177): yii\base\Controller->render('login', Array)
+#11 [internal function]: app\controllers\SiteController->actionLogin()
+#12 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#13 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#14 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('login', Array)
+#15 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('site/login', Array)
+#16 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#17 C:\lamp\www\openpeststrap\index.php(12): yii\base\Application->run()
+#18 {main}
+2015-07-23 05:01:47 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'b7f98d0f17d76930dcab25408f27374d9ecbdbbcd73d43975c0fb6fcec08a4b4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"gZmI6i5XB0Abak1QVujeQe1KPr5bgGk-\";}'
+    'PHPSESSID' => 'qmrbo4jd04p2qougvge3dj0fa6'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.89 Safari/537.36'
+    'HTTP_HTTPS' => '1'
+    'HTTP_REFERER' => 'http://localhost/openpeststrap/traps'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=b7f98d0f17d76930dcab25408f27374d9ecbdbbcd73d43975c0fb6fcec08a4b4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22gZmI6i5XB0Abak1QVujeQe1KPr5bgGk-%22%3B%7D; PHPSESSID=qmrbo4jd04p2qougvge3dj0fa6'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\ManagementStudio\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\wamp\\bin\\php\\php5.5.12;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseGit\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.7'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/lamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/lamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/lamp/www/openpeststrap/index.php'
+    'REMOTE_PORT' => '60372'
+    'REDIRECT_URL' => '/openpeststrap/site/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/openpeststrap/site/login'
+    'SCRIPT_NAME' => '/openpeststrap/index.php'
+    'PHP_SELF' => '/openpeststrap/index.php'
+    'REQUEST_TIME_FLOAT' => 1437652907.551
+    'REQUEST_TIME' => 1437652907
+]
+2015-07-23 05:02:07 [127.0.0.1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Setting unknown property: yii\bootstrap\ActiveField::cssClass' in C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\Component.php:197
+Stack trace:
+#0 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\BaseYii.php(518): yii\base\Component->__set('cssClass', 'form-control')
+#1 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\Object.php(105): yii\BaseYii::configure(Object(yii\bootstrap\ActiveField), Array)
+#2 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2-bootstrap\ActiveField.php(156): yii\base\Object->__construct(Array)
+#3 [internal function]: yii\bootstrap\ActiveField->__construct(Array)
+#4 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\di\Container.php(372): ReflectionClass->newInstanceArgs(Array)
+#5 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\di\Container.php(151): yii\di\Container->build('yii\\bootstrap\\A...', Array, Array)
+#6 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\\bootstrap\\A...', Array, Array)
+#7 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\widgets\ActiveForm.php(281): yii\BaseYii::createObject(Array)
+#8 C:\lamp\www\openpeststrap\_protected\views\site\login.php(30): yii\widgets\ActiveForm->field(Object(app\models\LoginForm), 'username', Array)
+#9 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\View.php(325): require('C:\\lamp\\www\\ope...')
+#10 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\lamp\\www\\ope...', Array)
+#11 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\lamp\\www\\ope...', Array, Object(app\controllers\SiteController))
+#12 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('login', Array, Object(app\controllers\SiteController))
+#13 C:\lamp\www\openpeststrap\_protected\controllers\SiteController.php(177): yii\base\Controller->render('login', Array)
+#14 [internal function]: app\controllers\SiteController->actionLogin()
+#15 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#16 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#17 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('login', Array)
+#18 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('site/login', Array)
+#19 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 C:\lamp\www\openpeststrap\index.php(12): yii\base\Application->run()
+#21 {main}
+2015-07-23 05:02:07 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'b7f98d0f17d76930dcab25408f27374d9ecbdbbcd73d43975c0fb6fcec08a4b4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"gZmI6i5XB0Abak1QVujeQe1KPr5bgGk-\";}'
+    'PHPSESSID' => 'qmrbo4jd04p2qougvge3dj0fa6'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.89 Safari/537.36'
+    'HTTP_HTTPS' => '1'
+    'HTTP_REFERER' => 'http://localhost/openpeststrap/traps'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=b7f98d0f17d76930dcab25408f27374d9ecbdbbcd73d43975c0fb6fcec08a4b4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22gZmI6i5XB0Abak1QVujeQe1KPr5bgGk-%22%3B%7D; PHPSESSID=qmrbo4jd04p2qougvge3dj0fa6'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\ManagementStudio\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\wamp\\bin\\php\\php5.5.12;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseGit\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.7'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/lamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/lamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/lamp/www/openpeststrap/index.php'
+    'REMOTE_PORT' => '60374'
+    'REDIRECT_URL' => '/openpeststrap/site/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/openpeststrap/site/login'
+    'SCRIPT_NAME' => '/openpeststrap/index.php'
+    'PHP_SELF' => '/openpeststrap/index.php'
+    'REQUEST_TIME_FLOAT' => 1437652927.624
+    'REQUEST_TIME' => 1437652927
+]
+2015-07-23 05:04:14 [127.0.0.1][-][qmrbo4jd04p2qougvge3dj0fa6][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected '->' (T_OBJECT_OPERATOR)' in C:\lamp\www\openpeststrap\_protected\views\site\login.php:28
+Stack trace:
+#0 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile()
+#1 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render()
+#2 C:\lamp\www\openpeststrap\_protected\controllers\SiteController.php(177): yii\base\Controller->render()
+#3 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\InlineAction.php(55): app\controllers\SiteController->actionLogin()
+#4 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\InlineAction.php:55}()
+#5 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams()
+#6 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction()
+#7 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction()
+#8 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#9 C:\lamp\www\openpeststrap\index.php(12): yii\base\Application->run()
+#10 {main}
+2015-07-23 05:04:14 [127.0.0.1][-][qmrbo4jd04p2qougvge3dj0fa6][info][application] $_COOKIE = [
+    '_csrf' => 'b7f98d0f17d76930dcab25408f27374d9ecbdbbcd73d43975c0fb6fcec08a4b4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"gZmI6i5XB0Abak1QVujeQe1KPr5bgGk-\";}'
+    'PHPSESSID' => 'qmrbo4jd04p2qougvge3dj0fa6'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.89 Safari/537.36'
+    'HTTP_HTTPS' => '1'
+    'HTTP_REFERER' => 'http://localhost/openpeststrap/traps'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=b7f98d0f17d76930dcab25408f27374d9ecbdbbcd73d43975c0fb6fcec08a4b4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22gZmI6i5XB0Abak1QVujeQe1KPr5bgGk-%22%3B%7D; PHPSESSID=qmrbo4jd04p2qougvge3dj0fa6'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\ManagementStudio\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\wamp\\bin\\php\\php5.5.12;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseGit\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.7'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/lamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/lamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/lamp/www/openpeststrap/index.php'
+    'REMOTE_PORT' => '60447'
+    'REDIRECT_URL' => '/openpeststrap/site/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/openpeststrap/site/login'
+    'SCRIPT_NAME' => '/openpeststrap/index.php'
+    'PHP_SELF' => '/openpeststrap/index.php'
+    'REQUEST_TIME_FLOAT' => 1437653054.565
+    'REQUEST_TIME' => 1437653054
+]
+2015-07-23 05:04:15 [127.0.0.1][-][qmrbo4jd04p2qougvge3dj0fa6][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected '->' (T_OBJECT_OPERATOR)' in C:\lamp\www\openpeststrap\_protected\views\site\login.php:28
+Stack trace:
+#0 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile()
+#1 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render()
+#2 C:\lamp\www\openpeststrap\_protected\controllers\SiteController.php(177): yii\base\Controller->render()
+#3 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\InlineAction.php(55): app\controllers\SiteController->actionLogin()
+#4 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\InlineAction.php:55}()
+#5 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams()
+#6 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction()
+#7 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction()
+#8 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#9 C:\lamp\www\openpeststrap\index.php(12): yii\base\Application->run()
+#10 {main}
+2015-07-23 05:04:15 [127.0.0.1][-][qmrbo4jd04p2qougvge3dj0fa6][info][application] $_COOKIE = [
+    '_csrf' => 'b7f98d0f17d76930dcab25408f27374d9ecbdbbcd73d43975c0fb6fcec08a4b4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"gZmI6i5XB0Abak1QVujeQe1KPr5bgGk-\";}'
+    'PHPSESSID' => 'qmrbo4jd04p2qougvge3dj0fa6'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.89 Safari/537.36'
+    'HTTP_HTTPS' => '1'
+    'HTTP_REFERER' => 'http://localhost/openpeststrap/traps'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=b7f98d0f17d76930dcab25408f27374d9ecbdbbcd73d43975c0fb6fcec08a4b4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22gZmI6i5XB0Abak1QVujeQe1KPr5bgGk-%22%3B%7D; PHPSESSID=qmrbo4jd04p2qougvge3dj0fa6'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\ManagementStudio\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\wamp\\bin\\php\\php5.5.12;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseGit\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.7'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/lamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/lamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/lamp/www/openpeststrap/index.php'
+    'REMOTE_PORT' => '60448'
+    'REDIRECT_URL' => '/openpeststrap/site/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/openpeststrap/site/login'
+    'SCRIPT_NAME' => '/openpeststrap/index.php'
+    'PHP_SELF' => '/openpeststrap/index.php'
+    'REQUEST_TIME_FLOAT' => 1437653055.291
+    'REQUEST_TIME' => 1437653055
+]
+2015-07-23 05:04:15 [127.0.0.1][-][qmrbo4jd04p2qougvge3dj0fa6][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected '->' (T_OBJECT_OPERATOR)' in C:\lamp\www\openpeststrap\_protected\views\site\login.php:28
+Stack trace:
+#0 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile()
+#1 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render()
+#2 C:\lamp\www\openpeststrap\_protected\controllers\SiteController.php(177): yii\base\Controller->render()
+#3 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\InlineAction.php(55): app\controllers\SiteController->actionLogin()
+#4 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\InlineAction.php:55}()
+#5 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams()
+#6 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction()
+#7 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction()
+#8 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#9 C:\lamp\www\openpeststrap\index.php(12): yii\base\Application->run()
+#10 {main}
+2015-07-23 05:04:15 [127.0.0.1][-][qmrbo4jd04p2qougvge3dj0fa6][info][application] $_COOKIE = [
+    '_csrf' => 'b7f98d0f17d76930dcab25408f27374d9ecbdbbcd73d43975c0fb6fcec08a4b4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"gZmI6i5XB0Abak1QVujeQe1KPr5bgGk-\";}'
+    'PHPSESSID' => 'qmrbo4jd04p2qougvge3dj0fa6'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.89 Safari/537.36'
+    'HTTP_HTTPS' => '1'
+    'HTTP_REFERER' => 'http://localhost/openpeststrap/traps'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=b7f98d0f17d76930dcab25408f27374d9ecbdbbcd73d43975c0fb6fcec08a4b4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22gZmI6i5XB0Abak1QVujeQe1KPr5bgGk-%22%3B%7D; PHPSESSID=qmrbo4jd04p2qougvge3dj0fa6'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\ManagementStudio\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\wamp\\bin\\php\\php5.5.12;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseGit\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.7'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/lamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/lamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/lamp/www/openpeststrap/index.php'
+    'REMOTE_PORT' => '60449'
+    'REDIRECT_URL' => '/openpeststrap/site/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/openpeststrap/site/login'
+    'SCRIPT_NAME' => '/openpeststrap/index.php'
+    'PHP_SELF' => '/openpeststrap/index.php'
+    'REQUEST_TIME_FLOAT' => 1437653055.847
+    'REQUEST_TIME' => 1437653055
+]
+2015-07-23 05:04:53 [127.0.0.1][-][qmrbo4jd04p2qougvge3dj0fa6][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected ',', expecting ']'' in C:\lamp\www\openpeststrap\_protected\views\site\login.php:28
+Stack trace:
+#0 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile()
+#1 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render()
+#2 C:\lamp\www\openpeststrap\_protected\controllers\SiteController.php(177): yii\base\Controller->render()
+#3 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\InlineAction.php(55): app\controllers\SiteController->actionLogin()
+#4 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\InlineAction.php:55}()
+#5 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams()
+#6 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction()
+#7 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction()
+#8 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#9 C:\lamp\www\openpeststrap\index.php(12): yii\base\Application->run()
+#10 {main}
+2015-07-23 05:04:53 [127.0.0.1][-][qmrbo4jd04p2qougvge3dj0fa6][info][application] $_COOKIE = [
+    '_csrf' => 'b7f98d0f17d76930dcab25408f27374d9ecbdbbcd73d43975c0fb6fcec08a4b4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"gZmI6i5XB0Abak1QVujeQe1KPr5bgGk-\";}'
+    'PHPSESSID' => 'qmrbo4jd04p2qougvge3dj0fa6'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.89 Safari/537.36'
+    'HTTP_HTTPS' => '1'
+    'HTTP_REFERER' => 'http://localhost/openpeststrap/traps'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=b7f98d0f17d76930dcab25408f27374d9ecbdbbcd73d43975c0fb6fcec08a4b4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22gZmI6i5XB0Abak1QVujeQe1KPr5bgGk-%22%3B%7D; PHPSESSID=qmrbo4jd04p2qougvge3dj0fa6'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\ManagementStudio\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\wamp\\bin\\php\\php5.5.12;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseGit\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.7'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/lamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/lamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/lamp/www/openpeststrap/index.php'
+    'REMOTE_PORT' => '60450'
+    'REDIRECT_URL' => '/openpeststrap/site/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/openpeststrap/site/login'
+    'SCRIPT_NAME' => '/openpeststrap/index.php'
+    'PHP_SELF' => '/openpeststrap/index.php'
+    'REQUEST_TIME_FLOAT' => 1437653093.042
+    'REQUEST_TIME' => 1437653093
+]
+2015-07-23 05:04:53 [127.0.0.1][-][qmrbo4jd04p2qougvge3dj0fa6][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected ',', expecting ']'' in C:\lamp\www\openpeststrap\_protected\views\site\login.php:28
+Stack trace:
+#0 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile()
+#1 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render()
+#2 C:\lamp\www\openpeststrap\_protected\controllers\SiteController.php(177): yii\base\Controller->render()
+#3 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\InlineAction.php(55): app\controllers\SiteController->actionLogin()
+#4 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\InlineAction.php:55}()
+#5 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams()
+#6 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction()
+#7 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction()
+#8 C:\lamp\www\openpeststrap\_protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#9 C:\lamp\www\openpeststrap\index.php(12): yii\base\Application->run()
+#10 {main}
+2015-07-23 05:04:53 [127.0.0.1][-][qmrbo4jd04p2qougvge3dj0fa6][info][application] $_COOKIE = [
+    '_csrf' => 'b7f98d0f17d76930dcab25408f27374d9ecbdbbcd73d43975c0fb6fcec08a4b4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"gZmI6i5XB0Abak1QVujeQe1KPr5bgGk-\";}'
+    'PHPSESSID' => 'qmrbo4jd04p2qougvge3dj0fa6'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.89 Safari/537.36'
+    'HTTP_HTTPS' => '1'
+    'HTTP_REFERER' => 'http://localhost/openpeststrap/traps'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=b7f98d0f17d76930dcab25408f27374d9ecbdbbcd73d43975c0fb6fcec08a4b4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22gZmI6i5XB0Abak1QVujeQe1KPr5bgGk-%22%3B%7D; PHPSESSID=qmrbo4jd04p2qougvge3dj0fa6'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\ManagementStudio\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\wamp\\bin\\php\\php5.5.12;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseGit\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.7'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/lamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/lamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/lamp/www/openpeststrap/index.php'
+    'REMOTE_PORT' => '60451'
+    'REDIRECT_URL' => '/openpeststrap/site/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/openpeststrap/site/login'
+    'SCRIPT_NAME' => '/openpeststrap/index.php'
+    'PHP_SELF' => '/openpeststrap/index.php'
+    'REQUEST_TIME_FLOAT' => 1437653093.725
+    'REQUEST_TIME' => 1437653093
+]
