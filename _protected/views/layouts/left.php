@@ -3,10 +3,7 @@ use yii\bootstrap\Nav;
 
 ?>
 <aside class="main-sidebar">
-
     <section class="sidebar">
-
-        
         <?=
         Nav::widget(
             [

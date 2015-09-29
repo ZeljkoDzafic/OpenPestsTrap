@@ -201,6 +201,7 @@ class SiteController extends Controller
      */
     public function actionRequestPasswordReset()
     {
+		$this->layout = "main-login";
         $model = new PasswordResetRequestForm();
 
         if ($model->load(Yii::$app->request->post()) && $model->validate()) 
@@ -236,6 +237,7 @@ class SiteController extends Controller
      */
     public function actionResetPassword($token)
     {
+		$this->layout = "main-login";
         try 
         {
             $model = new ResetPasswordForm($token);
@@ -276,7 +278,8 @@ class SiteController extends Controller
      * @return string|\yii\web\Response
      */
     public function actionSignup()
-    {  
+    {
+		$this->layout = "main-login";
         // get setting value for 'Registration Needs Activation'
         $rna = Yii::$app->params['rna'];
 
@@ -336,6 +339,7 @@ class SiteController extends Controller
      */
     private function signupWithActivation($model, $user)
     {
+		$this->layout = "main-login";
         // try to send account activation email
         if ($model->sendAccountActivationEmail($user)) 
         {

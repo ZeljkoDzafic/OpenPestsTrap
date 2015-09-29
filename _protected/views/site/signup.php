@@ -14,7 +14,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <h1><?= Html::encode($this->title) ?></h1>
 
-    <div class="col-lg-5 well bs-component">
+    <div class="well bs-component">
 
         <p><?= Yii::t('app', 'Please fill out the following fields to signup:') ?></p>
 

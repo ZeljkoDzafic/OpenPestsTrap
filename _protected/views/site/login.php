@@ -10,11 +10,7 @@ $this->title = Yii::t('app', 'Login');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
-<div class="login-box">
-      <div class="login-logo">
-        <a href="#"><b>OpenPests</b>Trap</a>
-      </div><!-- /.login-logo -->
-      <div class="login-box-body">
+
         <p class="login-box-msg"><?= Html::encode($this->title) ?></p>
     
         <p><?= Yii::t('app', 'Please fill out the following fields to login:') ?></p>
@@ -52,11 +48,9 @@ $this->params['breadcrumbs'][] = $this->title;
         </form>
 
 
-        <?= Html::a(Yii::t('app', 'reset it'), ['site/request-password-reset']) ?>.<br>
-       <?= Html::a(Yii::t('app', 'Register'), ['site/register']) ?>.
+        <?= Html::a(Yii::t('app', 'Reset it'), ['site/request-password-reset']) ?>.<br>
+       <?= Html::a(Yii::t('app', 'Register'), ['site/signup']) ?>.
 
-      </div><!-- /.login-box-body -->
-    </div>
 
 
 

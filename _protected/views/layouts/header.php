@@ -10,12 +10,15 @@ $user = \Yii::$app->user->identity;
 ?>
 
 <header class="main-header">
-    <?= Html::img('@web/uploads/logo3.png', ['class' => 'logo']) ?>
+        <!-- Logo -->
+        <a href="index.php" class="logo">
+          <!-- mini logo for sidebar mini 50x50 pixels -->
+          <span class="logo-mini"><b>OP</b>T</span>
+          <!-- logo for regular state and mobile devices -->
+          <span class="logo-lg"><b>OpenPests</b>Trap</span>
+        </a>
     <nav class="navbar navbar-static-top" role="navigation">
         
-        <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
-            <span class="sr-only">Toggle navigation</span>
-        </a>
 
         <div class="navbar-custom-menu">
 
