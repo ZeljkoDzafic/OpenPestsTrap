@@ -58,7 +58,7 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ route('network.index') }}" style="padding: 0 15px;">
-                    <img src="{{ asset('img/aerometer_logo.png') }}" alt="Aerometer" style="height: 100%;" />
+                    <img src="{{ asset('img/logo.png') }}" alt="Aerometer" style="height: 100%;" />
                 </a>
             </div>
 
