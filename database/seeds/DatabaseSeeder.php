@@ -14,7 +14,11 @@ class DatabaseSeeder extends Seeder
     {
         Model::unguard();
 
-        // $this->call(UserTableSeeder::class);
+        DB::table('users')->insert([
+            'name' => 'OpenPestTrap',
+            'email' => 'admin@openpesttrap.com',
+            'password' => bcrypt('debug'),
+        ]);
 
         Model::reguard();
     }
