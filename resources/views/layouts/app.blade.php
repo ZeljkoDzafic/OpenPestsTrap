@@ -68,6 +68,9 @@
                 @if(\Illuminate\Support\Facades\Auth::check())
                     <ul class="nav navbar-nav">
                         <li><a href="{{ route('network.index') }}"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                    @if(\Illuminate\Support\Facades\Auth::user()->admin)
+                        <li><a href="{{ route('backend') }}"><span class="fa fa-tachometer"></span> Backend</a></li>
+                    @endif
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="{{ route('user.edit',\Illuminate\Support\Facades\Auth::user()->id) }}"><span class="glyphicon glyphicon-user"></span> Edit profile</a></li>
