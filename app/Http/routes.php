@@ -28,6 +28,7 @@ Route::filter('admin', function()
 });
 
 Route::group(['before'=>'admin'],function(){
+    Route::get('/backend',['as'=>'backend','uses'=>'UsersController@backend']);
     Route::resource('notifications','NotificationsController');
     Route::get('notification/delete',['as'=>'notification.delete','uses'=>'NotificationsController@delete']);
     Route::resource('users','UsersController');

@@ -79,7 +79,7 @@
                                     <div class="box-footer">
                                         <div class="row">
                                             <div class="col-sm-10 col-sm-offset-2">
-                                                <a href="" class="btn btn-default">Back</a>
+                                                <a href="{{ route('network.index') }}" class="btn btn-default">Back</a>
                                                 <button type="submit" class="btn btn-primary">Save</button>
                                             </div>
                                         </div>

@@ -23,6 +23,12 @@ class UsersController extends Controller
         return view('users.index')->with('users',$users);
     }
 
+    public function backend()
+    {
+        return view('users.backend');
+    }
+
+
     public function admin($id)
     {
         $user = User::findOrFail($id);
