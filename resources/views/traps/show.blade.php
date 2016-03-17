@@ -30,7 +30,7 @@
             <div class="panel panel-default">
 
                 <ul class="nav  nav-tabs ">
-                                    <li class="active">
+                                    <li >
                                         <a href="#tab1" data-toggle="tab">
                                             <i class="livicon" data-name="user" data-size="16" data-c="#000" data-hc="#000" data-loop="true"></i>
                                             Show traps</a>
@@ -41,7 +41,7 @@
                                             Error log</a>
                                     </li>
 
-                                    <li>
+                                    <li class="active">
                                         <a href="#tab3" data-toggle="tab">
                                             <i class="livicon" data-name="key" data-size="16" data-loop="true" data-c="#000" data-hc="#000"></i>
                                            Diagram of insects</a>
@@ -50,7 +50,7 @@
                                 </ul>
 
             <div  class="tab-content mar-top">
-                            <div id="tab1" class="tab-pane fade active in">
+                            <div id="tab1" class="tab-pane fade">
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="panel">
@@ -166,7 +166,7 @@
 
                                         </div>
 
-                                    <div id="tab3" class="tab-pane fade">
+                                    <div id="tab3" class="tab-pane fade active in">
                                         <div style="width: 50%">
                                             <canvas id="canvas" height="450" width="600"></canvas>
                                         </div>
@@ -235,13 +235,13 @@
         ]
 
     }
-
-    window.onload = function(){
+    $( document ).ready(function(){
         var ctx = document.getElementById("canvas").getContext("2d");
         window.myLine = new Chart(ctx).Line(lineChartData, {
             responsive: true
         });
-    }
+    })
+
 
 
 

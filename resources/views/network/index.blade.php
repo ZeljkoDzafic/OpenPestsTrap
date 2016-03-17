@@ -86,7 +86,7 @@
 
 
 
-                                <td ><a href="{{ route('image', $t->id)}}"><i  class="fa fa-camera-retro"></i></a></td>
+                                <td ><a href="#"><i  class="fa fa-camera-retro"></i></a></td>
 
                                 <td><a href="{{ route('traps.edit', $t->id)}}"><i class="fa fa-pencil-square-o"></i> </a></td>
                                 <td>
